@@ -1,0 +1,90 @@
+.promo__nav {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-top: -70px;
+  margin-bottom: 50px;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: @basic-grey;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 2;
+
+  @media @tablet {
+    margin-top: -50px;
+  }
+
+  @media @mobile {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.promo__nav-link {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: @black;
+  text-decoration: none;
+  padding: 60px 51px 20px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    background: url(../../img/line-promo.svg) no-repeat 50% 50%;
+  }
+
+  @media @tablet {
+    padding: 60px 27px 20px;
+  }
+}
+
+.promo__nav li:last-child .promo__nav-link::after {
+  display: none;
+}
+
+.promo__nav li:nth-of-type(1) .promo__nav-link {
+  background: @basic-grey url(../../img/design.svg) no-repeat 50% 17px;
+}
+
+.promo__nav li:nth-of-type(2) .promo__nav-link {
+  background: @basic-grey url(../../img/brochure.svg) no-repeat 50% 25px;
+}
+
+.promo__nav li:nth-of-type(3) .promo__nav-link {
+  background: @basic-grey url(../../img/sheeting.svg) no-repeat 50% 25px;
+}
+
+.promo__nav li:nth-of-type(4) .promo__nav-link {
+  background: @basic-grey url(../../img/paint-palette.svg) no-repeat 50% 25px;
+}
+
+.promo__nav li:nth-of-type(5) .promo__nav-link {
+  background: @basic-grey url(../../img/offset.svg) no-repeat 50% 25px;
+}
+
+.promo__nav li:nth-of-type(6) .promo__nav-link {
+  background: @basic-grey url(../../img/printing.svg) no-repeat 50% 25px;
+}
+
+.promo__nav li .promo__nav-link:hover {
+  transition: 300ms;
+  background-color: @black-hover;
+}
+
+.promo__nav li .promo__nav-link:active {
+  transition: 300ms;
+  background-color: @black-active;
+}
